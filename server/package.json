@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "start": "tsx src/index.ts"
+    "start": "tsx src/index.ts",
+    "check:upwork": "tsx src/upwork/checkKey.ts",
+    "check:freelancer": "tsx src/freelancer/checkToken.ts",
+    "jobs:freelancer": "tsx src/freelancer/printJobs.ts",
+    "recommend": "tsx src/freelancer/printJobs.ts"
   },
   "engines": {
     "node": ">=22.11.0"

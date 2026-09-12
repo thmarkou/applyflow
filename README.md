@@ -13,14 +13,18 @@ This project must not share Metro, Pods, or Node modules with VoiceAction, Prepp
 
 Do not run another Metro on 8088. If VoiceAction is on 8081, both can run.
 
+## Freelancer personal token
+
+Upwork API access is blocked until the account has enough history. Live search uses Freelancer.com.
+
+1. Generate a **production** personal token at [accounts.freelancer.com/settings/develop](https://accounts.freelancer.com/settings/develop)
+2. Put it in `server/.env` as `FREELANCER_TOKEN=` — do not paste the token into chat
+3. Tokens last 30 days; only one active token per environment
+4. Check it: `cd server && npm run check:freelancer`
+
 ## Upwork API key
 
-Do not paste the client secret into chat.
-
-1. Copy `server/.env.example` to `server/.env`
-2. Put `UPWORK_CLIENT_ID` and `UPWORK_CLIENT_SECRET` there
-3. Keys stay **Disabled** until Upwork review finishes — the app uses mock jobs until then
-4. Callback already registered: `https://theofanis-markou.vercel.app/oauth/upwork/callback`
+Still stored in `.env` for later. Do not resubmit while the account is below $25k / 90% JSS.
 
 ## Run on iPhone 14 Pro Max (Xcode)
 

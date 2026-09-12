@@ -12,6 +12,7 @@ export type Job = {
     verifiedPayment: boolean;
     hires: number;
     rating: number;
+    countryCode: string | null;
   };
   proposals: number;
   postedAt: string;
